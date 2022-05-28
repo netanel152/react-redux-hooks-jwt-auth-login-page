@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Login from "./components/Login";
 import UserInfo from "./components/UserInfo";
-import BoardUser from "./components/BoardUser";
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
@@ -62,7 +61,6 @@ const App = () => {
             <Route exact path={["/", "/login"]} component={Login} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/info" component={UserInfo} />
-            <Route path="/user" component={BoardUser} />
           </Switch>
         </div>
       </div>
