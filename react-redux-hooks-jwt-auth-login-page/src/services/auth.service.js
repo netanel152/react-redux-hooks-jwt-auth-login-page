@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "https://private-052d6-testapi4528.apiary-mock.com/authenticate/";
+const API_URL = "https://private-052d6-testapi4528.apiary-mock.com/authenticate";
 
 const login = async (email, password) => {
   const response = await axios
@@ -7,7 +7,7 @@ const login = async (email, password) => {
       email,
       password,
     });
-  if (response.data.accessToken) {
+  if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
   return response.data;
