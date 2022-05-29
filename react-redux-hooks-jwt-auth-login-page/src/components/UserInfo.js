@@ -8,7 +8,7 @@ const UserInfo = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
   const [projectList, setProjectList] = useState([]);
   const [totalAvg, setTotalAvg] = useState(0);
-  const [MmadeDadelineAvg, setMmadeDadelineAvg] = useState(0);
+  const [madeDadelineAvg, setMadeDadelineAvg] = useState(0);
   const [percent, setCalcPercent] = useState();
   useEffect(() => {
     getProjectList();
@@ -89,7 +89,7 @@ const UserInfo = () => {
 
         var totalMadeDadelineAvg = sumMmadeDadeline / countMadeDadeline;
         var fixTotalMmadeDadelineAvgNum = totalMadeDadelineAvg.toFixed(2);
-        setMmadeDadelineAvg(fixTotalMmadeDadelineAvgNum);
+        setMadeDadelineAvg(fixTotalMmadeDadelineAvgNum);
 
         var totalAvg = sumAll / response.data.length;
         var fixTotalAvgNum = totalAvg.toFixed(2);
@@ -133,7 +133,7 @@ const UserInfo = () => {
         </p>
         <p>
           <strong>The avg of all projects that made dadeline is</strong>{" "}
-          {MmadeDadelineAvg} <strong>and the percent is</strong> {percent}%
+          {madeDadelineAvg} <strong>and the percent is</strong> {percent}%
         </p>
         <ProjectTable columns={columns} data={projectList} />
       </div>

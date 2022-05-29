@@ -22,7 +22,7 @@ export default function Table({ columns, data }) {
 
   const handleFilterChange = (e) => {
     const value = e.target.value || undefined;
-    setFilter("name", value); // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
+    setFilter("name", value); // Update the name filter. Now our table will filter and show only the rows which have a matching value
     setFilterInput(value);
   };
 
